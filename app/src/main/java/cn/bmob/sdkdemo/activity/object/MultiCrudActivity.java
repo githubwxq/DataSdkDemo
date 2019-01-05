@@ -94,18 +94,18 @@ public class MultiCrudActivity extends AppCompatActivity {
         List<BmobObject> categories = new ArrayList<>();
 
         Category category = new Category();
-        category.setObjectId("此处填写对应的需要修改数据的objectId");
-        category.setName("name" + System.currentTimeMillis());
+        category.setObjectId("5d198a85ca");
+        category.setName("name" + "wxq1");
         category.setDesc("类别" + System.currentTimeMillis());
 
         Category category1 = new Category();
-        category1.setObjectId("此处填写对应的需要修改数据的objectId");
-        category1.setName("name" + System.currentTimeMillis());
+        category1.setObjectId("b61fe3fd07");
+        category1.setName("name222" + System.currentTimeMillis());
         category1.setDesc("类别" + System.currentTimeMillis());
 
         Category category2 = new Category();
-        category2.setObjectId("此处填写对应的需要修改数据的objectId");
-        category2.setName("name" + System.currentTimeMillis());
+        category2.setObjectId("bfd29c1bd4");
+        category2.setName("name333" + System.currentTimeMillis());
         category2.setDesc("类别" + System.currentTimeMillis());
 
         categories.add(category);
@@ -141,13 +141,13 @@ public class MultiCrudActivity extends AppCompatActivity {
         List<BmobObject> categories = new ArrayList<>();
 
         Category category = new Category();
-        category.setObjectId("此处填写对应的需要删除数据的objectId");
+        category.setObjectId("6cbf720ed5");
 
         Category category1 = new Category();
-        category1.setObjectId("此处填写对应的需要删除数据的objectId");
+        category1.setObjectId("31939e9d53");
 
         Category category2 = new Category();
-        category2.setObjectId("此处填写对应的需要删除数据的objectId");
+        category2.setObjectId("29ef4f81e4");
 
         categories.add(category);
         categories.add(category1);
