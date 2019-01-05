@@ -121,7 +121,7 @@ public class UserThirdActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_third_signup_login:
-                //TODO 此处替换为你进行第三方登录后得到的信息
+                //TODO 此处替换为你进行第三方登录后得到的信息  友盟获取三方登入信息
                 thirdSingupLogin("", "", "", "");
                 break;
             case R.id.btn_third_bind:

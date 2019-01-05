@@ -133,10 +133,11 @@ public class PostsActivity extends AppCompatActivity {
     private void updatePostAuthor() {
         User user = new User();
         //需要修改，否则会有internal error
-        user.setObjectId("此处填写你需要关联的用户");
+        user.setObjectId(BmobUser.getCurrentUser(User.class).getObjectId());
         Post post = new Post();
         //需要修改，否则会有internal error
-        post.setObjectId("此处填写需要修改的帖子");
+        post.setTitle("dddddddddddddddddddd");
+        post.setObjectId("db6a1ab7e0");
         //修改一对一关联，修改帖子和用户的关系
         post.setAuthor(user);
         post.update(new UpdateListener() {
@@ -159,7 +160,7 @@ public class PostsActivity extends AppCompatActivity {
     private void removePostAuthor() {
         Post post = new Post();
         //需要修改，否则会有internal error
-        post.setObjectId("此处填写需要修改的帖子");
+        post.setObjectId("db6a1ab7e0");
         //删除一对一关联，解除帖子和用户的关系
         post.remove("author");
         post.update(new UpdateListener() {

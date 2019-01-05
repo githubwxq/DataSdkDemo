@@ -43,7 +43,7 @@ public class UserEmailActivity extends AppCompatActivity {
      */
     private void resetPasswordByEmail() {
         //TODO 此处替换为你的邮箱
-        final String email = "email";
+        final String email = EMAIL;
         BmobUser.resetPasswordByEmail(email, new UpdateListener() {
 
             @Override
@@ -58,13 +58,15 @@ public class UserEmailActivity extends AppCompatActivity {
         });
     }
 
+    public static final String EMAIL="805380422@qq.com";
+
 
     /**
      * 发送验证邮件
      */
     private void emailVerify() {
         //TODO 此处替换为你的邮箱
-        final String email = "email";
+        final String email = EMAIL;
         BmobUser.requestEmailVerify(email, new UpdateListener() {
 
             @Override
@@ -85,7 +87,7 @@ public class UserEmailActivity extends AppCompatActivity {
      */
     private void loginByEmailPwd() {
         //TODO 此处替换为你的邮箱和密码
-        BmobUser.loginByAccount("email","password", new LogInListener<User>() {
+        BmobUser.loginByAccount(EMAIL,"qq8903505wxq", new LogInListener<User>() {
 
             @Override
             public void done(User user, BmobException e) {

@@ -3,6 +3,7 @@ package cn.bmob.sdkdemo.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -26,6 +27,8 @@ import cn.bmob.sdkdemo.activity.sms.SmsActivity;
 import cn.bmob.sdkdemo.activity.table.TableActivity;
 import cn.bmob.sdkdemo.activity.update.AppVersionUpdateActivity;
 import cn.bmob.sdkdemo.activity.user.UserActivity;
+import cn.bmob.sdkdemo.bean.User;
+import cn.bmob.v3.BmobUser;
 
 /**
  * 数据SDK 操作示例
@@ -69,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+//
+//        String fileName=BmobUser.getCurrentUser(User.class).getAvatar().get;
+//
+//        Toast.makeText(this,fileName,Toast.LENGTH_LONG).show();
 
     }
 

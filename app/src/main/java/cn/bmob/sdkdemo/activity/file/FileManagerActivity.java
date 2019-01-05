@@ -277,18 +277,29 @@ public class FileManagerActivity extends AppCompatActivity {
      * @param file
      */
     private void uploadSingleFile(File file) {
-        BmobFile bmobFile = new BmobFile(file);
+        final BmobFile bmobFile = new BmobFile(file);
         bmobFile.upload(new UploadFileListener() {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
-                    Snackbar.make(mBtnUploadSingle, "上传成功", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mBtnUploadSingle, bmobFile.getFileUrl()+"上传成功", Snackbar.LENGTH_LONG).show();
+                    User user=  BmobUser.getCurrentUser(User.class);
+                    user.setAvatar(bmobFile);
+                    user.update(new UpdateListener() {
+                        @Override
+                        public void done(BmobException e) {
+                            Snackbar.make(mBtnUploadSingle, "用户头像更新", Snackbar.LENGTH_LONG).show();
+                        }
+                    });
                 } else {
                     Log.e("BMOB", e.getErrorCode()+"-"+e.getMessage());
                     Snackbar.make(mBtnUploadSingle, "上传失败：" +e.getErrorCode()+"-"+ e.getMessage(), Snackbar.LENGTH_LONG).show();
                 }
             }
         });
+
+
+
     }
 
     /**

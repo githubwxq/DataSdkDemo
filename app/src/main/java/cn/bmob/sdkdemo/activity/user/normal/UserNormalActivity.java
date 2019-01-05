@@ -130,8 +130,8 @@ public class UserNormalActivity extends AppCompatActivity {
      */
     private void signUp(final View view) {
         final User user = new User();
-        user.setUsername("" + System.currentTimeMillis());
-        user.setPassword("" + System.currentTimeMillis());
+        user.setUsername("17501461752");
+        user.setPassword("111111");
         user.setAge(18);
         user.setGender(0);
         user.signUp(new SaveListener<User>() {
@@ -153,9 +153,9 @@ public class UserNormalActivity extends AppCompatActivity {
     private void login(final View view) {
         final User user = new User();
         //此处替换为你的用户名
-        user.setUsername("username");
+        user.setUsername("17501461752");
         //此处替换为你的密码
-        user.setPassword("password");
+        user.setPassword("111111");
         user.login(new SaveListener<User>() {
             @Override
             public void done(User bmobUser, BmobException e) {
@@ -174,7 +174,7 @@ public class UserNormalActivity extends AppCompatActivity {
      */
     private void loginByAccount(final View view) {
         //此处替换为你的用户名密码
-        BmobUser.loginByAccount("username", "password", new LogInListener<User>() {
+        BmobUser.loginByAccount("17501461752", "111111", new LogInListener<User>() {
             @Override
             public void done(User user, BmobException e) {
                 if (e == null) {
@@ -212,7 +212,7 @@ public class UserNormalActivity extends AppCompatActivity {
      * 修改当前用户密码
      */
     private void resetPassword(final View view) {
-        BmobUser.updateCurrentUserPassword("oldPassword", "newPassword", new UpdateListener() {
+        BmobUser.updateCurrentUserPassword("111111", "111111", new UpdateListener() {
 
             @Override
             public void done(BmobException e) {
@@ -223,6 +223,8 @@ public class UserNormalActivity extends AppCompatActivity {
                 }
             }
         });
+//        BmobUser.getCurrentUser(User.class).pa;
+
     }
 
 
@@ -272,6 +274,7 @@ public class UserNormalActivity extends AppCompatActivity {
      */
     private void queryUser(final View view) {
         BmobQuery<User> bmobQuery = new BmobQuery<>();
+
         bmobQuery.findObjects(new FindListener<User>() {
             @Override
             public void done(List<User> object, BmobException e) {
@@ -290,7 +293,7 @@ public class UserNormalActivity extends AppCompatActivity {
      */
     private void updatePassword(final View view){
         //TODO 此处替换为你的旧密码和新密码
-        BmobUser.updateCurrentUserPassword("oldPwd", "newPwd", new UpdateListener() {
+        BmobUser.updateCurrentUserPassword("111111", "111111", new UpdateListener() {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
